@@ -1,0 +1,47 @@
+### Project Description:
+The aim of the project is to identify the intent of text.
+### Data Description:
+1.	train.csv
+•	total number of rows: 15000
+•	No missing data
+•	2 features: text and intent
+
+2.	test.csv
+•	total number of rows: 4500
+•	No missing data
+•	1 feature: text
+
+### Initial Findings:
+1.	Data is equally distributed. 
+2.	Total 150 intent are present in data.
+
+### Model
+1.	Preprocessing.ipynb : Convert text into Lowercase and remove Punctuation
+2.	Model 1 - Intent Classification with RASA and Spacy Training: For Model Training and Evaluation
+3.	Model 1 - Intent Classification with RASA and Spacy Prediction: Predict the results.
+4.	RASA_intent_classification: saved model
+5.	train_preprocessed.csv : cleaned data
+
+### How to run the code
+Required Packages:
+•	! pip install rasa-nlu
+•	! pip install sklearn_crfsuite
+•	! pip install spacy
+•	! python -m spacy download en_core_web_sm
+•	! pip install pandas
+
+### Run the code:
+Model 1 - Intent Classification with RASA and Spacy Prediction
+1. Download and saved RASA_intent_classification folder
+2. update the model_directory location where you saved RASA_intent_classification folder in the "Model 1 - Intent Classification with RASA and Spacy Prediction.ipynb" file on line number 6
+e.g. model_directory = r'D:/RASA_intent_classification'
+3. update input_text value on line number 16
+input_text = '<provide text to predict intent>'
+4. update Data Location
+DATA_PATH = 'D:/'
+5. Run the file 'Model 1 - Intent Classification with RASA and Spacy Prediction.ipynb'
+6. Check the results 'predicted_results_RASA.csv' in DATA_PATH
+
+### Conclusion
+I have implemented and trained Model1 using RASA and Spacy and Model2 using BERT and TensorFlow. I got the better results with Model2 using RASA and Spacy.
+
